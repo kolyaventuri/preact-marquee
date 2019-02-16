@@ -4,7 +4,10 @@
   "description": "A simple marquee component in Preact",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.js",
+    "test": "xo && ava",
+    "lint": "xo"
   },
   "repository": {
     "type": "git",
@@ -25,13 +28,21 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
+    "ava": "^1.2.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "parcel-bundler": "^1.11.0",
     "postcss-modules": "^1.4.1",
+    "pre-commit": "^1.2.2",
     "preact": "^8.4.2",
     "preact-shadow-root": "^1.0.2",
-    "sass": "^1.17.0"
-  }
+    "sass": "^1.17.0",
+    "xo": "^0.24.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
